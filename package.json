@@ -1,0 +1,11 @@
+{
+  "name": "HackIdeas",
+  "version": "1.0.0",
+  "description": "Virtual space to plan hackday ideas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcus Noble",
+  "license": "MIT"
+}
