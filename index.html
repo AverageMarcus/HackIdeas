@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hack Ideas! 💭</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+</head>
+<body>
+  <main>
+    <div class="row">
+      <div class="col s2 card blue-grey darken-1">
+        <div class="card-content white-text">
+          <h1 class="card-title">Hack Ideas 💭</h1>
+          <p>
+            A virtual space to come up with hackday ideas.
+          </p>
+        </div>
+        <div class="card-action center-align">
+          <a href="#" class="waves-effect waves-light btn white-text red lighten-2">Create new Hackday</a>
+        </div>
+      </div>
+      <div class="col s10">
+
+        <nav>
+          <div class="nav-wrapper">
+            <h2 id="hackday-title" class="brand-logo center"></h2>
+            <ul id="nav-mobile" class="right">
+              <li><a href="#" title="Add an idea"><i class="material-icons">add</i></a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="row">
+          <div class="col s9">
+            <blockquote id="hackday-desc" class="blue-grey-text text-lighten-1"></blockquote>
+          </div>
+          <div class="input-field col s3 right">
+            <select id="sort_order">
+              <option value="1">Hot</option>
+              <option value="2">New</option>
+            </select>
+            <label for="sort_order">Sort order</label>
+          </div>
+        </div>
+
+        <div id="ideas" class="center-align">
+          <div class="row">
+            <div class="col s8 offset-s2">
+              <div class="loading">Fetching ideas...</div>
+              <div class="progress">
+                  <div class="indeterminate"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2015
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/template" id="ideaTemplate">
+    <div class="card-panel hoverable idea">
+      <div class="card-content blue-grey-text">
+        <h3 class="card-title idea-title"></h3>
+        <p class="idea-description"></p>
+        <ul class="team-members"></ul>
+      </div>
+      <div class="card-action center-align">
+        <a href="#" class="waves-effect waves-light btn">
+          <i class="material-icons">thumb_up</i>
+          <div class="thumbs_up_count">0</div>
+        </a>
+        <a href="#" class="waves-effect waves-light btn">Join team</a>
+      </div>
+    </div>
+  </script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  <script src="script/main.js"></script>
+</body>
+</html>

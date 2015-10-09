@@ -1,0 +1,55 @@
+body, html {
+  padding:0;
+  margin:0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1.card-title {
+  font-size: 2.5em !important;
+}
+
+h2.brand-logo {
+  margin: 0.5em 0;
+}
+
+h3 {
+  font-size:2em;
+}
+
+.team-members:before {
+  content: 'Team Members: ';
+  font-weight: bold;
+}
+.team-members li {
+  display: inline-block;
+}
+.team-members li:not(:last-of-type):after {
+  content: ',';
+}
+
+.thumbs_up_count {
+  position: fixed;
+  top: -0.5em;
+  left: -0.5em;
+  background-color: #546E7A;
+  height: 2em;
+  border-radius: 1em;
+  width: 2em;
+  line-height: 2em;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  color: #fff;
+}
+
+#ideas .loading {
+  font-size: 3em;
+  padding-top: 100px;
+}
